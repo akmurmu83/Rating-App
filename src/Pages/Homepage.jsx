@@ -16,10 +16,11 @@ function Homepage() {
     }
     getData();
   }, []);
+  let currDay = 1;
   return (
     <div>
       <h1>Homepage</h1>
-      {days.map((day)=> <Day key={day.id} dayCount={days.length} members={day.members}/>)}
+      {days.map((day)=> <Day key={day.id} date={day.date} dayCount={`0${currDay++}`} members={day.members}/>)}
     </div>
   );
 }

@@ -1,16 +1,16 @@
 import React from "react";
 import MemberScore from "./MemberScore";
 
-function Day({ dayCount, members }) {
+function Day({ date, dayCount, members }) {
   return (
     <div>
-      <h3>Day-{dayCount}</h3>
-      <table>
+      <h3>Day-{dayCount} ({date})</h3>
+      <table style={{border: '1px solid', margin:'auto', borderCollapse: 'collapse'}}>
         <thead>
-          <tr>
+          <tr style={{border: '1px solid'}}>
             <td>Member</td>
             {members.map((member) => (
-              <td key={member.id}>Score {member.id}</td>
+              <td  style={{border: '1px solid'}} key={member.id}>Score {member.id}</td>
             ))}
           </tr>
         </thead>
