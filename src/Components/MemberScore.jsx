@@ -1,17 +1,21 @@
+import { Td, Tr } from "@chakra-ui/react";
 import React from "react";
 import { Link } from "react-router-dom";
+import Styles from "./MemberScore.module.css";
 
 function MemberScore({ name, scores }) {
   return (
-    <tr  style={{border: '1px solid'}}>
-      <td  style={{border: '1px solid'}}>{name}</td>
+    <Tr className={Styles.tr}>
+      <Td style={{ border: "1px solid" }}>{name}</Td>
       {scores.map((score) => (
-        <td style={{border: '1px solid'}} key={score.score}>{score.score}</td>
+        <Td style={{ border: "1px solid" }} key={score.score}>
+          {score.score}
+        </Td>
       ))}
-      <td style={{border: '1px solid'}}>
+      <Td style={{ border: "1px solid" }}>
         <Link to="/feedback">Feedback</Link>
-      </td>
-    </tr>
+      </Td>
+    </Tr>
   );
 }
 

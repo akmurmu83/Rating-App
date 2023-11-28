@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Day from "../Components/Day";
+import {Box} from "@chakra-ui/react"
 
 function Homepage() {
   const [days, setDays] = useState([]);
@@ -10,6 +11,7 @@ function Homepage() {
         let data = await res.json();
         console.log("data", data);
         setDays(data);
+        console.log(data);
       } catch (error) {
         console.log(error);
       }
@@ -18,10 +20,10 @@ function Homepage() {
   }, []);
   let currDay = 1;
   return (
-    <div>
+    <Box>
       <h1>Homepage</h1>
       {days.map((day)=> <Day key={day.id} date={day.date} dayCount={`0${currDay++}`} members={day.members}/>)}
-    </div>
+    </Box>
   );
 }
 
