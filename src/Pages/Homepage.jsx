@@ -21,7 +21,6 @@ function Homepage() {
   let currDay = 1;
   return (
     <Box>
-      <h1>Homepage</h1>
       {days.map((day)=> <Day key={day.id} date={day.date} dayCount={`0${currDay++}`} members={day.members}/>)}
     </Box>
   );

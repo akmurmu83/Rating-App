@@ -5,9 +5,9 @@ import {Box, Table, Tbody, Td, Thead, Tr} from "@chakra-ui/react";
 
 function Day({ date, dayCount, members }) {
   return (
-    <Box className={Styles.tr}>
+    <Box w={1000} m="auto" mb={10}>
       <h3>Day-{dayCount} ({date})</h3>
-      <Table style={{border: '1px solid', margin:'auto', borderCollapse: 'collapse'}}>
+      <Table colorScheme='grey' >
         <Thead>
           <Tr style={{border: '1px solid'}}>
             <Td>Member</Td>

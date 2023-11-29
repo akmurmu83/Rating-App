@@ -1,5 +1,5 @@
 import React from "react";
-import { Flex, Box, Link, Spacer, useTheme } from "@chakra-ui/react";
+import { Flex, Box, Link, Spacer, useTheme, Button, ButtonGroup } from "@chakra-ui/react";
 
 function Navbar() {
   const theme = useTheme(); // Access the Chakra UI theme
@@ -12,12 +12,10 @@ function Navbar() {
       </Box>
       <Spacer />
       <Box>
-        <Link mr={5} href="#" fontSize="md" fontWeight="normal" color="white">
-          Your Portfolio
-        </Link>
-        <Link mr={5} href="#" fontSize="md" fontWeight="normal" color="white">
-          Your Portfolio
-        </Link>
+      <ButtonGroup gap='2' variant="solid">
+      <Button colorScheme='green'>Sign up</Button>
+      <Button colorScheme='orange'>Admin's Corner</Button>
+    </ButtonGroup>
       </Box>
     </Flex>
   );
