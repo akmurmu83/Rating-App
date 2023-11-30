@@ -5,13 +5,13 @@ import { Link as ReactRouterLink } from "react-router-dom";
 function MemberScore({ name, scores }) {
   return (
     <Tr>
-      <Td>{name}</Td>
+      <Td textAlign="center">{name}</Td>
       {scores.map((score) => (
-        <Td key={score.score}>
+        <Td key={score.score} textAlign="center">
           {score.score}
         </Td>
       ))}
-      <Td>
+      <Td textAlign="center">
       <ChakraLink
           as={ReactRouterLink}
           to="/feedback"

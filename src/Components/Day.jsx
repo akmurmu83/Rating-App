@@ -23,9 +23,12 @@ function Day({ date, dayCount, members }) {
         <Table colorScheme="grey">
           <Thead>
             <Tr style={{ border: "1px solid" }}>
-              <Td>Member</Td>
+              <Td textAlign="center">Member</Td>
               {members.map((member) => (
-                <Td style={{ border: "1px solid" }} key={member.id}>
+                <Td
+                  style={{ border: "1px solid", textAlign: "center" }}
+                  key={member.id}
+                >
                   Score {member.id}
                 </Td>
               ))}
